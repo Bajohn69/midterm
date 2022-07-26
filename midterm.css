@@ -1,0 +1,63 @@
+body{
+    overflow: hidden;
+}
+
+.section1{
+    width: 100%;
+    height: 100vh;
+}
+
+.dark{
+    background-color: #20222E;
+    background: url(./img/dark.png);
+
+}
+
+.purple{
+    background-color: #595BD4;
+    background: url(./img/purple.png);
+}
+
+.yellow{
+    background-color: #FFCB2F;
+    background: url(./img/yellow.png);
+}
+
+.orange{
+    background-color: #FE9526;
+    background: url(./img/orange.png);
+
+}
+
+.blue{
+    background-color: #167FFC;
+    background: url(./img/blue.png);
+
+}
+
+.lightblue{
+    background-color: #167FFC;
+    background: url(./img/lightblue.png);
+
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+}
+
+.nav {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    cursor: pointer;
+}
+
+li {
+    width: 10px;
+    height: 10px;
+    margin: 20px;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    list-style-type: none;
+}
