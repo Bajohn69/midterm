@@ -1,6 +1,6 @@
 
-// let nam = prompt('請輸入姓名');
-// $('.test1').text(nam)
+let nam = prompt('請輸入姓名');
+$('.test1').text(nam)
 
 
 // console.log($('body').width());
@@ -31,7 +31,7 @@ $(window).mousewheel(function (e) {
         }
     }
     $('html, body').animate({'scrollTop':$('.p0' + n).offset().top}, function(){moving = 0})
-    // console.log(n);
+    console.log(n);
 })
 
 //根據捲軸的位置改變右方導覽列游標的顏色

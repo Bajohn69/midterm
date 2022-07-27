@@ -31,6 +31,7 @@ li {
 .purple{
     background-color: #595BD4;
     background: url(./img/purple.png);
+    /* position: relative; */
 }
 
 .yellow{
@@ -196,25 +197,47 @@ section .scroll div:nth-child(2){
 }
 
 /* --------------------------------- purple -------------------------------- */
-.position1{
+.bgDeco svg{
+    mix-blend-mode: multiply;
+}
+.bgDeco{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.positionLeftTop{
     position: absolute;
-    top: 100px;
-    left: 200px;
+    top: -100px;
+    left: 0px;
 }
 
-.position2{
+.positionRightTop{
     position: absolute;
-    top: 800px;
-    right: 200px;
+    top: -100px;
+    right: 0px;
 }
 
-.aniHorizontal{
-    animation: Horizontal 90s infinite linear ;
+.positionRightBottom{
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
 }
 
-@keyframes Horizontal {
+.positionLeftBottom{
+    position: absolute;
+    bottom: -100px;
+    left: 100px;
+}
+
+
+.aniHorizontalRight{
+    animation: HorizontalRight 150s infinite linear 5s ;
+}
+
+@keyframes HorizontalRight {
     0%, 100%{
-        transform: translateX(0);
+        transform: translateX(-200px);
     }
 
     50%{
@@ -222,17 +245,45 @@ section .scroll div:nth-child(2){
     }
 }
 
-.aniVertical{
-    animation: Vertical 60s infinite linear ;
+.aniHorizontalLeft{
+    animation: HorizontalLeft 150s infinite linear ;
 }
 
-@keyframes Vertical {
+@keyframes HorizontalLeft {
+    0%, 100%{
+        transform: translateX(200px);
+    }
+
+    50%{
+        transform: translateX(-1900px);
+    }
+}
+
+.aniVerticalTop{
+    animation: VerticalTop 120s infinite linear 5s;
+}
+
+@keyframes VerticalTop {
     0%, 100%{
         transform: translateY(0);
     }
 
     50%{
         transform: translateY(-900px);
+    }
+}
+
+.aniVerticalDown{
+    animation: VerticalDown 120s infinite linear ;
+}
+
+@keyframes VerticalDown {
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(900px);
     }
 }
 
