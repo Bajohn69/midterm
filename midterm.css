@@ -2,9 +2,24 @@ body{
     overflow: hidden;
 }
 
-.section1{
-    width: 100%;
-    height: 100vh;
+span{
+    color: #FFCB2F;
+}
+
+.nav {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    cursor: pointer;
+}
+
+li {
+    width: 10px;
+    height: 10px;
+    margin: 20px;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    list-style-type: none;
 }
 
 .dark{
@@ -38,26 +53,193 @@ body{
 .lightblue{
     background-color: #167FFC;
     background: url(./img/lightblue.png);
+}
+
+/* --------------------------------- dark -------------------------------- */
+
+.text1{
+    font-size: 6rem;
+}
+
+.font1{
+    font-family: 'Noto Serif TC', serif;
+}
+
+.font2{
+    font-family: 'GenSenRounded-B', sans-serif;
+}
+@font-face {
+    font-family:'GenSenRounded-B' ;
+    src: url(./font/gensen-font-master/ttc/GenSenRounded-B.ttc);
+}
+
+.font3{
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.font4{
+    font-family: 'mushin', serif;
+}
+
+@font-face {
+    font-family:'mushin' ;
+    src: url(./font/MODI_mushin_2021_1104/mushin.otf);
+}
+
+.font5{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.font6{
+    font-family: '刻石錄顏體_I.Ngaan', serif;
+}
+
+@font-face {
+    font-family:'刻石錄顏體_I.Ngaan' ;
+    src: url(./font/刻石錄顏體_I.Ngaan.ttf);
+}
+
+section{
+    /* position: relative; */
+    width: 100%;
+    height: 100vh;
+}
+
+section .scroll{
+    width: 100%;
+    display: flex;
+}
+
+section .scroll div{
+    white-space: nowrap;
+    animation: animate 40s linear infinite;
+    animation-delay: -40s;
 
 }
+
+section .scroll div:nth-child(2){
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+.gradient{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    background-color: #FFCB2F;
+    background:linear-gradient(rgba(0,0,0,0) 80%,rgba(0,0,0,0.7)100%) ;
+}
+
+.mouse{
+    position:absolute;
+    z-index: 22;
+    width: 30px;
+    height: 50px;
+    border: 3px white solid;
+    border-radius: 50px;
+    animation: mouseSlide 3s ease-in-out infinite ;
+    display: flex;
+    box-shadow: 1px 3px 12px 9px rgba(0,0,0,0.04);
+    left: 50%;
+    top: 82%;
+}
+
+.wheel{
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 3px);
+    width: 6px;
+    height: 8px;
+    border-radius: 8px;
+    border: 1px white solid;
+    background-color: white;
+    animation: wheel 2s ease infinite;
+}
+
+@keyframes mouseSlide {
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+@keyframes wheel {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------- purple -------------------------------- */
+.position1{
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.position2{
+    position: absolute;
+    top: 800px;
+    right: 200px;
+}
+
+.aniHorizontal{
+    animation: Horizontal 90s infinite linear ;
+}
+
+@keyframes Horizontal {
+    0%, 100%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(1400px);
+    }
+}
+
+.aniVertical{
+    animation: Vertical 60s infinite linear ;
+}
+
+@keyframes Vertical {
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-900px);
+    }
+}
+
+/* --------------------------------- footer -------------------------------- */
 
 footer{
     width: 100%;
     height: 60px;
 }
 
-.nav {
-    position: fixed;
-    top: 50%;
-    right: 15px;
-    cursor: pointer;
-}
-
-li {
-    width: 10px;
-    height: 10px;
-    margin: 20px;
-    border: 1px #fff solid;
-    border-radius: 5px;
-    list-style-type: none;
-}

@@ -1,6 +1,18 @@
-// $(window).mousewheel(function (e) {
-//     console.log(e.deltaY);
+
+// let nam = prompt('請輸入姓名');
+// $('.test1').text(nam)
+
+
+// console.log($('body').width());
+
+// $('#btn').click(function (e) {
+//     if($('body').width() > 576){
+//         $('h1').css('color','red')
+//     }else{
+//         $('h1').css('color','blue')
+//     }
 // })
+
 
 let num_li = $("li").length
 n = 1
@@ -19,7 +31,7 @@ $(window).mousewheel(function (e) {
         }
     }
     $('html, body').animate({'scrollTop':$('.p0' + n).offset().top}, function(){moving = 0})
-    console.log(n);
+    // console.log(n);
 })
 
 //根據捲軸的位置改變右方導覽列游標的顏色
