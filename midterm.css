@@ -100,6 +100,15 @@ li {
     src: url(./font/刻石錄顏體_I.Ngaan.ttf);
 }
 
+.font7{
+    font-family: 'GenSenRounded-R', sans-serif;
+}
+
+@font-face {
+    font-family:'GenSenRounded-R' ;
+    src: url(./font/gensen-font-master/ttc/GenSenRounded-R.ttc);
+}
+
 section{
     /* position: relative; */
     width: 100%;
@@ -119,7 +128,7 @@ section .scroll div{
 }
 
 section .scroll div:nth-child(2){
-    animation: animate2 40s linear infinite;
+    animation: animate2 40s linear infinite ;
     animation-delay: -20s;
 }
 
@@ -197,7 +206,131 @@ section .scroll div:nth-child(2){
 }
 
 /* --------------------------------- purple -------------------------------- */
+.container{
+    z-index: 2;
+}
+h4{
+    font-size: 3rem;
+    padding-top: 40px;
+    padding-bottom: 12px;
+    line-height: 1.25;
+}
+
+h5{
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+.purple .title{
+    width: 532px;
+}
+
+.purple .fontCard{
+    height: 320px;
+    border-radius: 16px;
+    box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.25);
+}
+
+.fontCard{
+    /* perspective: 800px; */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .8s cubic-bezier(.44,-0.77,.16,1.42);
+}
+
+.front{
+    backface-visibility: hidden;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%) translateZ(70px);
+    
+}
+
+.back{
+    transform: rotateY(180deg) translateZ(70px);
+    backface-visibility: hidden;
+}
+
+.fontCard:hover{
+    transform: rotateY(180deg) ;
+}
+
+@keyframes rotateY {
+    0%{
+        transform: rotateY(0deg)
+    }
+
+    100%{
+        transform: rotateY(180deg)
+    }
+}
+
+.front h2{
+    font-size: 200px;
+    line-height: 1.4;
+}
+
+.frontTitle h6{
+    font-size: 32px;
+    /* font-weight: 700; */
+}
+
+.frontTitle .content{
+    line-height: 140%;
+}
+
+.back .content .p1{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.fontCard2 .p2{
+    font-size: 20px;
+}
+
+.fontCard2 .p3{
+    font-size: 18px;
+}
+
+.fontCard4 .p4{
+    font-size: 24px;
+}
+
+.fontCard4 .p5{
+    font-size: 30px;
+}
+
+.fontCard4 .p6{
+    font-size: 25px;
+}
+
+.fontCard4 h6{
+    font-size: 48px;
+}
+
+@media screen and (max-width:576px) {
+    h4{
+        font-size: 2rem;
+        padding-top: 16px;
+        padding-bottom: 2px;
+    }
+    
+    h5{
+        font-size: 1rem;
+    }
+
+    .purple .title{
+        width: 320px;
+    }
+
+    .purple .fontCard{
+        height: 140px;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    }
+}
+
 .bgDeco svg{
+    opacity: 0.5;
     mix-blend-mode: multiply;
 }
 .bgDeco{

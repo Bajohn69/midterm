@@ -1,6 +1,6 @@
 
-let nam = prompt('請輸入姓名');
-$('.test1').text(nam)
+// let nam = prompt('請輸入姓名');
+// $('.test1').text(nam)
 
 
 // console.log($('body').width());
@@ -23,7 +23,7 @@ $(window).mousewheel(function (e) {
             moving = 1
         if(e.deltaY == -1){
             if(n < num_li)
-            n++
+                n++
         }else{
             if(n > 1){
                 n--
