@@ -1,5 +1,6 @@
 body{
     overflow: hidden;
+    /* cursor: url(./img/Group\ 3.png) 10 5, auto; */
 }
 
 span{
@@ -11,6 +12,7 @@ span{
     top: 50%;
     right: 15px;
     cursor: pointer;
+    z-index: 99;
 }
 
 li {
@@ -60,6 +62,12 @@ li {
 
 .text1{
     font-size: 6rem;
+}
+
+@media screen and (max-width:576px) {
+    .text1{
+        font-size: 3.8rem;
+    }
 }
 
 .font1{
@@ -150,6 +158,10 @@ section .scroll div:nth-child(2){
     }
 }
 
+/* button{
+    z-index: 3;
+} */
+
 .gradient{
     width: 100%;
     height: 100vh;
@@ -168,8 +180,9 @@ section .scroll div:nth-child(2){
     border-radius: 50px;
     animation: mouseSlide 3s ease-in-out infinite ;
     display: flex;
-    box-shadow: 1px 3px 12px 9px rgba(0,0,0,0.04);
+    box-shadow: 0 3px 12px 9px rgba(0,0,0,0.04);
     left: 50%;
+    transform: translate(-50%);
     top: 90%;
 }
 
@@ -203,6 +216,33 @@ section .scroll div:nth-child(2){
         transform: translateY(10px);
         opacity: 0;
     }
+}
+
+.mobomouse{
+    position:absolute;
+    z-index: 22;
+    left: calc(50% - 15px);
+    /* transform: translateX(-50%); */
+    top: 90%;
+    width: 30px;
+    height: 30px;
+    /* background-color: #fff; */
+    border-radius: 50%;
+    box-shadow: 0 3px 12px 9px rgba(0,0,0,0.04);
+
+    animation: mobomouse 1.5s ease-in-out infinite;
+}
+
+@keyframes mobomouse {
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    
 }
 
 /* --------------------------------- deco -------------------------------- */
@@ -247,13 +287,26 @@ section .scroll div:nth-child(2){
     position: absolute;
     bottom: 100px;
     right: 100px;
-    opacity: .3;
+    opacity: .5;
 }
 
 .genie1 h6{
     font-size: 1.5rem;
     line-height: 1.6;
 }
+
+.genie2{
+    position: absolute;
+    bottom: 100px;
+    right: 300px;
+    opacity: .5;
+}
+
+.genie2 h6{
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
 
 .aniHorizontalRight{
     animation: HorizontalRight 150s infinite linear 5s ;
@@ -333,7 +386,8 @@ h5{
 }
 
 .purple .fontCard{
-    height: 320px;
+    cursor: pointer;
+    height: 34vh;
     border-radius: 16px;
     box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.25);
 }
@@ -350,7 +404,6 @@ h5{
     position: absolute;
     left:50%;
     transform: translate(-50%) translateZ(70px);
-    
 }
 
 .back{
@@ -489,6 +542,129 @@ h5{
         font-size: 26px;
     }
 }
+
+/* --------------------------------- yellow -------------------------------- */
+
+.box{
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%);
+    width: 30%;
+    height: 50vh;
+    background-color: #167FFC;
+}
+
+.slidecontainer {
+    width: 30%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 16px;
+    background: rgba(41, 41, 41, 0.3);
+    border: 3px solid #FFFFFF;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 50px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+
+/* --------------------------------- orange -------------------------------- */
+
+.orange .title{
+    width: 910px;
+}
+
+.orange h3{
+    font-size: 3rem;
+    transition: .6s;
+    cursor:pointer;
+    /* margin: 15px ; */
+}
+
+@media screen and (max-width:576px) {
+    .orange h3{
+        font-size: 1.5rem;
+    }
+}
+
+.hoverbox:hover{
+    padding: 30px ;
+}
+
+.hoverbox{
+    transition: .6s;
+    padding: 15px ;
+}
+.orange .w200{
+    transition: .6s;
+    font-weight: 200;
+    /* top: 25%; */
+    opacity: .8;
+}
+
+.orange .w300{
+    font-weight: 300;
+    /* top: 35%; */
+    opacity: .8;
+
+}
+
+.orange .w400{
+    font-weight: 400;
+    /* top: 45%; */
+    opacity: .8;
+
+}
+
+.orange .w500{
+    font-weight: 500;
+    /* top: 55%; */
+    opacity: .8;
+
+}
+
+.orange .w600{
+    font-weight: 600;
+    /* top: 65%; */
+    opacity: .8;
+
+}
+
+.orange .w700{
+    font-weight: 700;
+    /* top: 75%; */
+    opacity: .8;
+
+}
+
+.orange .w900{
+    font-weight: 900;
+    /* top: 85%; */
+    opacity: .8;
+
+}
+
 
 /* --------------------------------- footer -------------------------------- */
 

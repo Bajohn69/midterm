@@ -5,13 +5,13 @@
 
 // console.log($('body').width());
 
-// $('#btn').click(function (e) {
-//     if($('body').width() > 576){
-//         $('h1').css('color','red')
-//     }else{
-//         $('h1').css('color','blue')
-//     }
-// })
+$('#btn').click(function (e) {
+    if($('body').width() > 576){
+        $('h1').css('color','red')
+    }else{
+        $('h1').css('color','blue')
+    }
+})
 
 
 let num_li = $("li").length
@@ -82,3 +82,55 @@ function center() {
     pos = $(window).height() / 2 - $(".nav").height() / 2
     $(".nav").css("top", pos)
 }
+
+// --------------------------------- yellow --------------------------------
+
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+    output.innerHTML = this.value;
+    
+    $('.box').width(this.value * 5)
+
+    }
+
+
+
+// --------------------------------- orange -------------------------------- 
+
+
+$('.orange .w200').mouseenter(function () {
+    $('.w200').fadeIn(100).text('字重就是字體的粗細 / ExtraLight').css('opacity','1')
+})
+
+$('.orange .w300').mouseenter(function () {
+    $('.w300').fadeIn(100).text('字重就是字體的粗細 / Light').css('opacity','1')
+})
+
+$('.orange .w400').mouseenter(function () {
+    $('.w400').fadeIn(100).text('字重就是字體的粗細 / Regular').css('opacity','1')
+})
+
+$('.orange .w500').mouseenter(function () {
+    $('.w500').fadeIn(100).text('字重就是字體的粗細 / Medium').css('opacity','1')
+})
+
+$('.orange .w600').mouseenter(function () {
+    $('.w600').fadeIn(100).text('字重就是字體的粗細 / SemiBold').css('opacity','1')
+})
+
+$('.orange .w700').mouseenter(function () {
+    $('.w700').fadeIn(100).text('字重就是字體的粗細 / Bold').css('opacity','1')
+})
+
+$('.orange .w900').mouseenter(function () {
+    $('.w900').fadeIn(100).text('字重就是字體的粗細 / Black').css('opacity','1')
+})
+
+$('.orange .hoverbox').mouseleave(function () {
+    // console.log('hi');
+    // $('.hoverbox').css('padding','15px')
+    $('.hoverbox h3').text('字重就是字體的粗細').css('opacity','0.8')
+})
