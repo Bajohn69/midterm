@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day9</title>
-</head>
-<body>
-    <h1>Day9</h1>
-    <button onclick="runTheRunner()">Run the runner</button>
-    <button onclick="stopTheRunner()">Stop the runner</button>
-    <button onclick="reInit()">Re Init</button>
-    <br>
-    <script src="./js/matter.min.js"></script>
-    <script>
+
         // Global Settings / Variables
         var Engine = Matter.Engine,
             Render = Matter.Render,
@@ -23,42 +8,128 @@
             Events = Matter.Events,
             BodyM = Matter.Body,
             Vertices = Matter.Vertices;
+            // 搬運
+            Common = Matter.Common,
+            MouseConstraint = Matter.MouseConstraint,
+            Mouse = Matter.Mouse;
         
         var engine;
+        // world = engine.world;
         var render;
         var runner;
         const canvasWidth = window.innerWidth;
         const canvasHeigh = 930;
-        const blockSize = 20;
-        const mainBallRadius = 20;
-        // 球的大小
+        const blockSize = 100;
+        const mainBallRadius = 50;
         const minimumBlockGenerateX = 50;
         const minimumBlockGenerateY = 100;
         const blockSeparateX = canvasWidth - minimumBlockGenerateX - 50;
         const blockSeparateY = canvasHeigh - minimumBlockGenerateY  - 100;
-        const minimumDistanceBetweenBlocks = 60;
+        const minimumDistanceBetweenBlocks = 300;
 
         function init()
         {
             engine = Engine.create();
             render = Render.create({
-                element: document.body,
+                element: document.getElementById('Li71'),
                 engine: engine,
                 options:{
                     wireframes:false,
-                    showIds:true,
-                    background: '#bfe9f5', //"#bfe9f5"
+                    showIds:false,
+                    background: 'none', //"#bfe9f5"
                     width:canvasWidth,
                     height:canvasHeigh
                 }
             });
             formHiddenWall();
-            formMainBall();
-            formRandomBlocks(20);
+            formMainBall(10);
+            formRandomBlocks(10);
+            formRandomBlocks2(10);
 
             Render.run(render);
             runner = Runner.create();
+            // Runner.run(runner, engine);
         }
+            
+            // runner = Runner.create();
+            // add bodies
+//     var offset = 10,
+//     options = { 
+//         isStatic: true
+//     };
+
+// world.bodies = [];
+
+// these static walls will not be rendered in this sprites example, see options
+// Composite.add(world, [
+//     Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
+//     Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
+//     Bodies.rectangle(800 + offset, 300, 50.5, 600.5 + 2 * offset, options),
+//     Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options)
+// ]);
+
+// var stack = Composites.stack(20, 20, 10, 4, 0, 0, function(x, y) {
+//     if (Common.random() > 0.35) {
+//         return Bodies.rectangle(x, y, 64, 64, {
+//             render: {
+//                 strokeStyle: '#ffffff',
+//                 sprite: {
+//                     texture: './img/social-enjoyfonts.png'
+//                 }
+//             }
+//         });
+//     } else {
+//         return Bodies.circle(x, y, 46, {
+//             density: 0.0005,
+//             frictionAir: 0.06,
+//             restitution: 0.3,
+//             friction: 0.01,
+//             render: {
+//                 sprite: {
+//                     texture: './img/Group 2.png'
+//                 }
+//             }
+//         });
+//     }
+// });
+
+// Composite.add(world, stack);
+
+// var mouse = Mouse.create(render.canvas),
+// mouseConstraint = MouseConstraint.create(engine, {
+//     mouse: mouse,
+//     constraint: {
+//         stiffness: 0.2,
+//         render: {
+//             visible: false
+//         }
+//     }
+// });
+
+
+
+// Composite.add(world, mouseConstraint);
+
+// // keep the mouse in sync with rendering
+// render.mouse = mouse;
+
+// Render.lookAt(render, {
+// min: { x: 0, y: 0 },
+// max: { x: canvasWidth, y: canvasHeigh }
+// });
+
+// // context for MatterTools.Demo
+// return {
+// engine: engine,
+// runner: runner,
+// render: render,
+// canvas: render.canvas,
+// stop: function() {
+//     Matter.Render.stop(render);
+//     Matter.Runner.stop(runner);
+// }
+// };
+        
         init();
 
         function reInit()
@@ -76,15 +147,15 @@
 
         function formMainBall()
         {
-            const mainBallInitX = canvasWidth/2;
-            const mainBallInitY = 50;
+            const mainBallInitX = minimumBlockGenerateX + blockSeparateX * Math.random();
+            const mainBallInitY = minimumBlockGenerateY + blockSeparateY * Math.random();;
             
             var mainBall = Bodies.circle(mainBallInitX, mainBallInitY, mainBallRadius, options = {
                 restitution: 1,
                 render:{
                     fillStyle:"#FFFFFF",
                     sprite: {
-                        texture: './img/face-holding-back-tears_1f979.png'
+                        texture: './img/pouting-face_1f621.png'
                     }
                 }
             }, 100);
@@ -93,20 +164,47 @@
         function formHiddenWall()
         {
             var wallLeft = Bodies.rectangle(-21, canvasHeigh/2, 40, canvasHeigh, { isStatic: true });
+            var wallFloor = Bodies.rectangle(canvasWidth/2, 922, canvasWidth, 30, { isStatic: true });
             var wallRight = Bodies.rectangle(canvasWidth+21, canvasHeigh/2, 40, canvasHeigh, { isStatic: true });
-            Composite.add(engine.world, [wallLeft,wallRight]);
+            Composite.add(engine.world, [wallLeft,wallRight,wallFloor]);
         }
 
         function formRandomBlocks(blockCount)
         {
             var blockOptions ={
+                restitution: 1,
                 render : {
                     fillStyle : "#569cd8",
                     sprite: {
-                        texture: './img/grinning-squinting-face_1f606.png'
+                        texture: './img/smiling-face-with-halo_1f607.png'
                     }
                 },
-                isStatic : true,
+                isStatic : false,
+                angle : getRadiusByDegree(0)
+            };
+            
+            var blockCoordinateList = [];
+            
+            for(var i=0; i<blockCount; i++)
+            {
+                var blockCoordinate = getRandomCoordinateForBlocks(blockCoordinateList);
+                var block = Bodies.rectangle(blockCoordinate.x, blockCoordinate.y, blockSize, blockSize, blockOptions);
+                blockCoordinateList.push(blockCoordinate);
+                Composite.add(engine.world, [block]);
+            }            
+        }
+
+        function formRandomBlocks2(blockCount)
+        {
+            var blockOptions ={
+                restitution: 1,
+                render : {
+                    fillStyle : "#569cd8",
+                    sprite: {
+                        texture: './img/face-holding-back-tears_1f979.png'
+                    }
+                },
+                isStatic : false,
                 angle : getRadiusByDegree(0)
             };
             
@@ -147,6 +245,7 @@
             return Math.sqrt(Math.pow(Math.floor(pointA.x) - Math.floor(pointB.x),2) + Math.pow(Math.floor(pointA.y) - Math.floor(pointB.y),2));
         }
 
+
         function runTheRunner()
         {
             Runner.run(runner, engine);
@@ -159,6 +258,5 @@
         {
             return Math.PI / 180 * degree;
         }
-    </script>
-</body>
-</html>
+
+        

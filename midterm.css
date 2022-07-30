@@ -3,9 +3,11 @@ body{
     /* cursor: url(./img/Group\ 3.png) 10 5, auto; */
 }
 
-span{
+.dark span{
     color: #FFCB2F;
 }
+
+
 
 .nav {
     position: fixed;
@@ -307,6 +309,18 @@ section .scroll div:nth-child(2){
     line-height: 1.6;
 }
 
+.genie3{
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    opacity: .7;
+}
+
+.genie3 h6{
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
 
 .aniHorizontalRight{
     animation: HorizontalRight 150s infinite linear 5s ;
@@ -545,18 +559,63 @@ h5{
 
 /* --------------------------------- yellow -------------------------------- */
 
-.box{
+.boxWrap{
     left: 50%;
-    top: 8%;
-    transform: translate(-50%);
-    width: 30%;
+    transform: translateX(-50%);
+    top: 12%;
+    width: 500px;
     height: 50vh;
-    background-color: #167FFC;
+}
+
+.box{
+    height: 50vh;
+    transform-origin: 0% 0%;
+}
+
+.box2{
+    right: 0;
+    height: 50vh;
+    /* background-color: #fc161667; */
+    transform-origin: 100% 100%;
+}
+
+.bar{
+    top: 40px;
+    width: 5px;
+    height: 450px;
+    background-color: #fff;
+    transform: translateX(-50%);
+    border-radius: 8px;
+}
+
+.yellow h2 span{
+    color: #000000;
+    opacity: 1;
+}
+
+.yellow p span{
+    opacity: 0;
+    color: #00000000;
+}
+
+.yellow h2{
+    font-size: 25rem;
+    width: 400px;
+}
+
+.Serif{
+    top: 0;
+    left: 50px;
+}
+
+.SansSerif{
+    right: 50px;
+    transform-origin: 100% 0%;
 }
 
 .slidecontainer {
-    width: 30%;
-    top: 60%;
+    width: 540px;
+    top: 65%;
     left: 50%;
     transform: translate(-50%);
 }
@@ -586,8 +645,55 @@ h5{
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 }
 
+.btnGroup{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.btn{
+    color: #fff;
+    background-color: #FE9526;
+    border-radius: 50px;
+}
+
+.btn:hover{
+    color: rgb(255, 255, 255);
+    background-color: #FD3D39;
+}
+
+.yellow .left{
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25%;
+    left: 7%;
+}
+
+.yellow .right{
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25%;
+    right: 7%;
+}
+
+.yellow .lefttitle{
+    font-size: 128px;
+    line-height:1;
+}
+
+.yellow .righttitle{
+    font-size: 100px;
+    line-height: 1.25;
+}
+
+.yellow h4{
+    font-size: 24px;
+    line-height: 1.4;
+}
 
 /* --------------------------------- orange -------------------------------- */
 

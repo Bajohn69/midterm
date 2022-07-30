@@ -1,5 +1,5 @@
 
-// let nam = prompt('請輸入姓名');
+// let nam = prompt('請輸入您的大名(っ・Д・)っ');
 // $('.test1').text(nam)
 
 
@@ -85,16 +85,36 @@ function center() {
 
 // --------------------------------- yellow --------------------------------
 
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
+    let slider = document.getElementById("myRange");
+    let output = document.getElementById("demo");
     output.innerHTML = slider.value;
 
     slider.oninput = function () {
     output.innerHTML = this.value;
     
     $('.box').width(this.value * 5)
+    $('.box2').width('500' - this.value * 5)
+    $('.bar').css('left',this.value * 5)
 
     }
+
+    // $('.btnDefault').click(function () {
+    //     $('.yellow > h2 > test1').text('永')
+    // })
+
+    $('.btnDefault').click(function () {
+        $('.yellow  span').css('display','none');
+
+    })
+    
+    $('.btnName').click(function () {
+        if(nam == ''){
+            nam = prompt('Oops! 剛剛好像沒輸入大名，請再次輸入您的大名(づ′▽`)づ')
+            $('.test1').text(nam)
+        }else{
+            $('.yellow  span').css('display','flex');
+        }
+    })
 
 
 

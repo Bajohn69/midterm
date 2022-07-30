@@ -406,8 +406,6 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
                 
             </div>
@@ -679,14 +677,46 @@
                 <path d="M116 0L142.922 38.144L187.122 23.1089L186.482 69.7921L231.078 83.6089L203.12 121L231.078 158.391L186.482 172.208L187.122 218.891L142.922 203.856L116 242L89.0784 203.856L44.878 218.891L45.5184 172.208L0.922165 158.391L28.88 121L0.922165 83.6089L45.5184 69.7921L44.878 23.1089L89.0784 38.144L116 0Z" fill="#FFCB2F"/>
                 </g>
             </svg>
-
-
+    
+            <div class="boxWrap justify-content-center position-relative">
+                <div class="box position-absolute overflow-hidden">
+                    <h2 class="font1 Serif position-absolute">
+                        <span class="test1">
+                        </span>永</h2>
+                </div>
+                <div class="box2 position-absolute overflow-hidden">
+                    <h2 class="font5 SansSerif position-absolute"><span class="test1"></span>永</h2>
+                </div>
+                <div class="bar position-absolute"></div>
+            </div>
             <div class="slidecontainer position-absolute">
-            <div class="box position-absolute"></div>
-
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                 <p> <span id="demo"></span></p>
             </div>
+            <div class="btnGroup position-absolute mt-3">
+                <div class="btn btnDefault font7 m-3">
+                    使用預設字（´・ω・`)
+                </div>
+                <div class="btn btnName font7 m-3">
+                    用你的名字試試看吧（´◔​∀◔`)
+                </div>
+            </div>
+            <div class="left position-absolute">
+                <h3 class="font1 lefttitle">Serif</h3>
+                <h4 class="font7 pt-0">襯線體，指有襯線的字體，又稱為有襯線體、襯線字，俗稱白體字；相反的，沒有襯線的字體則被稱為無襯線體。襯線是字形筆畫的起始段與末端的裝飾細節部分。</h4>
+            </div>
+            <div class="right position-absolute">
+                <h3 class="font5 righttitle">Sans-serif</h3>
+                <h4 class="font7 pt-0">無襯線體，指沒有襯線的字體，與襯線字體相反，完全拋棄裝飾襯線，只剩下主幹，造型簡明有力，更具現代感，起源也很晚。適用於標題、廣告，瞬間的識別性高。</h4>
+            </div>
+            <div class="genie3 d-none d-md-flex">
+                <h6 class="text-white text-md-center font7">
+                    請試著移動滑桿，<br>
+                    比較他們有什麼不一樣！<br>
+                    (ㄏ￣▽￣)ㄏ
+                </h6>
+            </div>
+
         </div>
     </section>
     <section id="orange" class="section1 orange p04 overflow-hidden">
@@ -926,7 +956,15 @@
         </div>
     </section>
     <section id="lightblue" class="section1 lightblue p05 overflow-hidden">
-
+        <div class="bgDeco">
+            <div id="Li71">
+                <button onclick="runTheRunner()">Run the runner</button>
+                <button onclick="stopTheRunner()">Stop the runner</button>
+                <button onclick="reInit()">Re Init</button>
+            </div>
+        </div>
+            
+    </section>
     </section>
     <section id="blue" class="section1 blue p06 overflow-hidden">
         <div class="bgDeco">
@@ -1142,9 +1180,16 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/jquery.mousewheel.min.js"></script>
     <script src="./js/matter.min.js"></script>
-
-    <script src="midterm.js">
+    <script src="./midterm.js"></script>
+    <script src="./js/matter_section.js"></script>
+    <!-- <script src="matter-js\demo/js/matter-demo.main.5754e1.min.js"></script> -->
+    <!-- <script src="matter-js\demo/js/matter-demo.matter-tools.97f38a.min.js"></script> -->
+    <!-- <script src="matter-js\demo/js/matter-demo.matter-wrap.dbda1f.min.js"></script>
+    <script src="matter-js\demo/js/matter-demo.pathseg.cf21c2.min.js"></script>
+    <script src="matter-js\demo/js/matter-demo.poly-decomp.c3d015.min.js"></script>
+    <script src="matter-js\demo\js\matter-demo.a280d3.min.js"></script>
+    <script src="midterm.js"> -->
         
-    </script>
+    
 </body>
 </html>
