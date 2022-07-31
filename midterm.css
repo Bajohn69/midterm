@@ -695,6 +695,139 @@ h5{
     line-height: 1.4;
 }
 
+@media screen and (max-width:576px) {
+    .boxWrap{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 25%;
+        width: 290px;
+        height: 40vh;
+    }
+    
+    .box3{
+        height: 40vh;
+        transform-origin: 0% 0%;
+        /* background-color: #fd3c3981; */
+    }
+    
+    .box4{
+        right: 0;
+        height: 40vh;
+        transform-origin: 100% 100%;
+        /* background-color: #167dfc82; */
+    }
+    
+    .bar{
+        top: 0px;
+        left: 0%;
+        width: 5px;
+        height: 250px;
+        background-color: #fff;
+        transform: translateX(-50%);
+        border-radius: 8px;
+    }
+    
+    .yellow h2{
+        top: -5%;
+        font-size: 13rem;
+        width: 300px;
+        line-height: 1.2;
+    }
+    
+    .Serif{
+        top: 0;
+        left: 195px;
+        transform: translateX(-50%) ;
+    }
+    
+    .SansSerif{
+        right: -60px;
+        transform-origin: 100% 0%;
+    }
+    
+    .slidecontainer {
+        width: 310px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%) ;
+    }
+    
+    .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 10px;
+        background: rgba(41, 41, 41, 0.3);
+        border: 1px solid #FFFFFF;
+        outline: none;
+        opacity: 1;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        border-radius: 50px;
+    }
+    
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    }
+    
+    .btnGroup{
+        /* font-size: 10px; */
+        width: 100%;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%);
+        /* border: #ff5b00 1px solid; */
+    }
+    
+    .btn{
+        color: #fff;
+        background-color: #FE9526;
+        border-radius: 50px;
+        font-size: 15px;
+    }
+    
+    .btn:hover{
+        color: rgb(255, 255, 255);
+        background-color: #FD3D39;
+    }
+    
+    .yellow .left{
+        top: 12%;
+        transform: translate(-50%,-50%);
+        width: 75%;
+        left: 50%;
+    }
+    
+    .yellow .right{
+        top: 76%;
+        transform: translate(-50%,-50%);
+        width: 75%;
+        left: 50%;
+
+    }
+    
+    .yellow .lefttitle{
+        font-size: 28px;
+        line-height:1;
+    }
+    
+    .yellow .righttitle{
+        font-size: 24px;
+        line-height: 1.25;
+    }
+    
+    .yellow h4{
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
 /* --------------------------------- orange -------------------------------- */
 
 .orange .title{

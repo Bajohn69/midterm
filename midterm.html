@@ -27,7 +27,7 @@
     </div>
     <section id="dark" class="section1 dark p01 overflow-hidden d-flex ">
 
-        <section class="d-none">
+        <section class="">
             <div class="scroll text1 font1 text-white mt-2">
                 <div>
                     <p> 沾沾字喜是一個介紹字體的網站，不知道 <span class="test1"></span> 之前對字體的了解有多少呢？ &nbsp</p>
@@ -678,27 +678,48 @@
                 </g>
             </svg>
     
-            <div class="boxWrap justify-content-center position-relative">
-                <div class="box position-absolute overflow-hidden">
+            <div class="boxWrap justify-content-center position-relative d-none d-md-block">
+                <div class="box position-absolute overflow-hidden ">
                     <h2 class="font1 Serif position-absolute">
                         <span class="test1">
                         </span>永</h2>
                 </div>
-                <div class="box2 position-absolute overflow-hidden">
+                <div class="box2 position-absolute overflow-hidden ">
                     <h2 class="font5 SansSerif position-absolute"><span class="test1"></span>永</h2>
                 </div>
                 <div class="bar position-absolute"></div>
             </div>
+            <!-- mobo -->
+            <div class="boxWrap justify-content-center position-relative d-md-none">
+                <div class="box3 position-absolute overflow-hidden ">
+                    <h2 class="font1 Serif position-absolute">
+                        <span class="test1">
+                        </span>永</h2>
+                </div>
+                <div class="box4 position-absolute overflow-hidden ">
+                    <h2 class="font5 SansSerif position-absolute"><span class="test1"></span>永</h2>
+                </div>
+                <div class="bar position-absolute"></div>
+            </div>
+            <!-- mobo end-->
             <div class="slidecontainer position-absolute">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                 <p> <span id="demo"></span></p>
             </div>
-            <div class="btnGroup position-absolute mt-3">
-                <div class="btn btnDefault font7 m-3">
+            <div class="btnGroup position-absolute mt-md-3 d-none d-md-flex">
+                <div class="btn btnDefault font7 m-md-3">
                     使用預設字（´・ω・`)
                 </div>
-                <div class="btn btnName font7 m-3">
+                <div class="btn btnName font7 m-md-3">
                     用你的名字試試看吧（´◔​∀◔`)
+                </div>
+            </div>
+            <div class="btnGroup position-absolute mt-md-3 d-md-none d-flex justify-content-center">
+                <div class="btn btnDefault font7 m-3">
+                    使用預設字<br> （´・ω・`)
+                </div>
+                <div class="btn btnName font7 m-3">
+                    用你的名字試試看吧<br> （´◔​∀◔`)
                 </div>
             </div>
             <div class="left position-absolute">
@@ -706,7 +727,7 @@
                 <h4 class="font7 pt-0">襯線體，指有襯線的字體，又稱為有襯線體、襯線字，俗稱白體字；相反的，沒有襯線的字體則被稱為無襯線體。襯線是字形筆畫的起始段與末端的裝飾細節部分。</h4>
             </div>
             <div class="right position-absolute">
-                <h3 class="font5 righttitle">Sans-serif</h3>
+                <h3 class="font5 righttitle text-right text-md-left">Sans-serif</h3>
                 <h4 class="font7 pt-0">無襯線體，指沒有襯線的字體，與襯線字體相反，完全拋棄裝飾襯線，只剩下主幹，造型簡明有力，更具現代感，起源也很晚。適用於標題、廣告，瞬間的識別性高。</h4>
             </div>
             <div class="genie3 d-none d-md-flex">
@@ -957,7 +978,13 @@
     </section>
     <section id="lightblue" class="section1 lightblue p05 overflow-hidden">
         <div class="bgDeco">
-            <div id="Li71">
+            
+            <div id="Li71" class="d-md-block d-none">
+                <button onclick="runTheRunner()">Run the runner</button>
+                <button onclick="stopTheRunner()">Stop the runner</button>
+                <button onclick="reInit()">Re Init</button>
+            </div>
+            <div id="Li71Mobo" class="d-md-none">
                 <button onclick="runTheRunner()">Run the runner</button>
                 <button onclick="stopTheRunner()">Stop the runner</button>
                 <button onclick="reInit()">Re Init</button>
@@ -1181,14 +1208,9 @@
     <script src="./js/jquery.mousewheel.min.js"></script>
     <script src="./js/matter.min.js"></script>
     <script src="./midterm.js"></script>
-    <script src="./js/matter_section.js"></script>
-    <!-- <script src="matter-js\demo/js/matter-demo.main.5754e1.min.js"></script> -->
-    <!-- <script src="matter-js\demo/js/matter-demo.matter-tools.97f38a.min.js"></script> -->
-    <!-- <script src="matter-js\demo/js/matter-demo.matter-wrap.dbda1f.min.js"></script>
-    <script src="matter-js\demo/js/matter-demo.pathseg.cf21c2.min.js"></script>
-    <script src="matter-js\demo/js/matter-demo.poly-decomp.c3d015.min.js"></script>
-    <script src="matter-js\demo\js\matter-demo.a280d3.min.js"></script>
-    <script src="midterm.js"> -->
+    <!-- <script src="./js/matter_section.js"></script>
+    <script src="./js/matter_section_mobo.js"></script> -->
+
         
     
 </body>

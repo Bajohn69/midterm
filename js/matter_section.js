@@ -17,15 +17,15 @@
         // world = engine.world;
         var render;
         var runner;
-        const canvasWidth = window.innerWidth;
-        const canvasHeigh = 930;
-        const blockSize = 100;
-        const mainBallRadius = 50;
-        const minimumBlockGenerateX = 50;
-        const minimumBlockGenerateY = 100;
-        const blockSeparateX = canvasWidth - minimumBlockGenerateX - 50;
-        const blockSeparateY = canvasHeigh - minimumBlockGenerateY  - 100;
-        const minimumDistanceBetweenBlocks = 300;
+        let canvasWidth = window.innerWidth;
+        let canvasHeigh = 930;
+        let blockSize = 100;
+        let mainBallRadius = 50;
+        let minimumBlockGenerateX = 50;
+        let minimumBlockGenerateY = 100;
+        let blockSeparateX = canvasWidth - minimumBlockGenerateX - 50;
+        let blockSeparateY = canvasHeigh - minimumBlockGenerateY  - 100;
+        let minimumDistanceBetweenBlocks = 300;
 
         function init()
         {
@@ -258,5 +258,7 @@
         {
             return Math.PI / 180 * degree;
         }
+
+        // -----------------------------------------------------------------
 
         

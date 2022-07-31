@@ -1,6 +1,6 @@
 
-// let nam = prompt('請輸入您的大名(っ・Д・)っ');
-// $('.test1').text(nam)
+let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
+$('.test1').text(nam)
 
 
 // console.log($('body').width());
@@ -95,6 +95,10 @@ function center() {
     $('.box').width(this.value * 5)
     $('.box2').width('500' - this.value * 5)
     $('.bar').css('left',this.value * 5)
+    
+    $('.box3').width(this.value * 2.9)
+    $('.box4').width('290' - this.value * 2.9)
+    $('.bar').css('left',this.value * 2.9)
 
     }
 
@@ -109,7 +113,7 @@ function center() {
     
     $('.btnName').click(function () {
         if(nam == ''){
-            nam = prompt('Oops! 剛剛好像沒輸入大名，請再次輸入您的大名(づ′▽`)づ')
+            nam = prompt('Oops! 剛剛好像沒輸入名字，請告訴我您的大名(づ′▽`)づ')
             $('.test1').text(nam)
         }else{
             $('.yellow  span').css('display','flex');
