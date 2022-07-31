@@ -1,6 +1,6 @@
 
-let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
-$('.test1').text(nam)
+// let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
+// $('.test1').text(nam)
 
 
 // console.log($('body').width());
@@ -98,7 +98,7 @@ function center() {
     
     $('.box3').width(this.value * 2.9)
     $('.box4').width('290' - this.value * 2.9)
-    $('.bar').css('left',this.value * 2.9)
+    $('.bar2').css('left',this.value * 2.9)
 
     }
 
