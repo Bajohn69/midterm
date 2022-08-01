@@ -18,14 +18,15 @@
         var render;
         var runner;
         let canvasWidth = window.innerWidth;
-        let canvasHeigh = 930;
-        let blockSize = 100;
+        let canvasHeigh = window.innerHeight;
+        let blockSize = 50;
         let mainBallRadius = 50;
         let minimumBlockGenerateX = 50;
         let minimumBlockGenerateY = 100;
         let blockSeparateX = canvasWidth - minimumBlockGenerateX - 50;
         let blockSeparateY = canvasHeigh - minimumBlockGenerateY  - 100;
         let minimumDistanceBetweenBlocks = 300;
+    
 
         function init()
         {
@@ -42,9 +43,10 @@
                 }
             });
             formHiddenWall();
-            formMainBall(10);
+            formMainBall(0);
             formRandomBlocks(10);
             formRandomBlocks2(10);
+            formRandomBlocks3(10);
 
             Render.run(render);
             runner = Runner.create();
@@ -134,7 +136,7 @@
 
         function reInit()
         {
-            event.preventDefault();
+            // event.preventDefault();
             Engine.clear(engine);
             Render.stop(render);
             Runner.stop(runner);
@@ -164,7 +166,7 @@
         function formHiddenWall()
         {
             var wallLeft = Bodies.rectangle(-21, canvasHeigh/2, 40, canvasHeigh, { isStatic: true });
-            var wallFloor = Bodies.rectangle(canvasWidth/2, 922, canvasWidth, 30, { isStatic: true });
+            var wallFloor = Bodies.rectangle(canvasWidth/2, canvasHeigh - 200, canvasWidth, 30, { isStatic: true });
             var wallRight = Bodies.rectangle(canvasWidth+21, canvasHeigh/2, 40, canvasHeigh, { isStatic: true });
             Composite.add(engine.world, [wallLeft,wallRight,wallFloor]);
         }
@@ -188,7 +190,32 @@
             for(var i=0; i<blockCount; i++)
             {
                 var blockCoordinate = getRandomCoordinateForBlocks(blockCoordinateList);
-                var block = Bodies.rectangle(blockCoordinate.x, blockCoordinate.y, blockSize, blockSize, blockOptions);
+                var block = Bodies.circle(blockCoordinate.x, blockCoordinate.y, blockSize, blockOptions);
+                blockCoordinateList.push(blockCoordinate);
+                Composite.add(engine.world, [block]);
+            }            
+        }
+
+        function formRandomBlocks3(blockCount)
+        {
+            var blockOptions ={
+                restitution: 1,
+                render : {
+                    fillStyle : "#569cd8",
+                    sprite: {
+                        texture: './img/smiling-cat-with-heart-eyes_1f63b.png'
+                    }
+                },
+                isStatic : false,
+                angle : getRadiusByDegree(0)
+            };
+            
+            var blockCoordinateList = [];
+            
+            for(var i=0; i<blockCount; i++)
+            {
+                var blockCoordinate = getRandomCoordinateForBlocks(blockCoordinateList);
+                var block = Bodies.circle(blockCoordinate.x, blockCoordinate.y, blockSize, blockOptions);
                 blockCoordinateList.push(blockCoordinate);
                 Composite.add(engine.world, [block]);
             }            
@@ -213,7 +240,7 @@
             for(var i=0; i<blockCount; i++)
             {
                 var blockCoordinate = getRandomCoordinateForBlocks(blockCoordinateList);
-                var block = Bodies.rectangle(blockCoordinate.x, blockCoordinate.y, blockSize, blockSize, blockOptions);
+                var block = Bodies.circle(blockCoordinate.x, blockCoordinate.y, blockSize, blockOptions);
                 blockCoordinateList.push(blockCoordinate);
                 Composite.add(engine.world, [block]);
             }            
@@ -258,6 +285,10 @@
         {
             return Math.PI / 180 * degree;
         }
+        // function Hello()
+        // {
+            
+        // }
 
         // -----------------------------------------------------------------
 

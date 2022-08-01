@@ -329,6 +329,18 @@ section .scroll div:nth-child(2) {
     line-height: 1.6;
 }
 
+.genie4 {
+    position: absolute;
+    bottom: 80px;
+    left: 100px;
+    opacity: .5;
+}
+
+.genie4 h6 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
 
 .aniHorizontalRight {
     animation: HorizontalRight 150s infinite linear 5s;
@@ -863,6 +875,10 @@ h5 {
     .orange h3 {
         font-size: 1.5rem;
     }
+
+    .orange .title {
+        width: 330px;
+    }
 }
 
 .hoverbox:hover {
@@ -932,8 +948,6 @@ h5 {
     border-radius: 16px;
 }
 
-.bluecard:hover {}
-
 .bluecard1 {
     background: url(./img/company-9.jpg) 50% 50% / cover;
 }
@@ -961,21 +975,47 @@ h5 {
 
 .blue p {
     font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* bottom: 0; */
-    /* transform: translateY(118%); */
+    background:linear-gradient(rgba(0, 0, 0, 0.8) ,rgba(0, 0, 0, 0.8)) ;
+    bottom: 0;
+    transform: translateY(110%);
     text-decoration: none;
     transition: .3s;
+    height: 110%;
+    /* backdrop-filter: blur(5px); */
 }
 
 .bluecard:hover p {
     /* bottom: 100%; */
+    /* backdrop-filter: blur(5px); */
+    transform: translateY(10%);
+}
 
-    transform: translateY(0%);
+.bluecard:hover .bluecard1,.bluecard:hover .bluecard6{
+    /* filter: blur(10px); */
+    backdrop-filter: blur(5px);
 }
 
 .blue h6 {
     font-size: 1.5rem;
+}
+
+@media screen and (max-width:576px) {
+
+    .blue p {
+        display: none;
+    }
+
+    .bluecard {
+        height: 20vh;
+    }
+
+    .blue .title {
+        width: 330px;
+    }
+
+    .blue h6 {
+        font-size: 1rem;
+    }
 }
 
 

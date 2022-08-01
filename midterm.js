@@ -1,6 +1,6 @@
 
-// let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
-// $('.test1').text(nam)
+let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
+$('.test1').text(nam)
 
 
 // console.log($('body').width());
@@ -83,6 +83,15 @@ function center() {
     $(".nav").css("top", pos)
 }
 
+// --------------------------------- purple --------------------------------
+$('.genie1').mouseenter(function () {
+    $('.genie1 p').text('ヽ(=^-ω-^=)丿')
+})
+
+$('.genie1').mouseleave(function () {
+    $('.genie1 p').text('ヽ(=^･ω･^=)丿')
+})
+
 // --------------------------------- yellow --------------------------------
 
     let slider = document.getElementById("myRange");
@@ -120,7 +129,14 @@ function center() {
         }
     })
 
+    $('.genie3').mouseenter(function () {
+        $('.genie3 p').text('ㄟ(￣▽￣ㄟ)')
+    })
 
+    $('.genie3').mouseleave(function () {
+        $('.genie3 p').text('(ㄏ￣▽￣)ㄏ')
+    })
+    
 
 // --------------------------------- orange -------------------------------- 
 
@@ -157,4 +173,23 @@ $('.orange .hoverbox').mouseleave(function () {
     // console.log('hi');
     // $('.hoverbox').css('padding','15px')
     $('.hoverbox h3').text('字重就是字體的粗細').css('opacity','0.8')
+})
+
+$('.genie2').mouseenter(function () {
+    $('.genie2 p').text('(ಠ_ಠ)')
+})
+
+$('.genie2').mouseleave(function () {
+    $('.genie2 p').text('(´・ω・`)')
+})
+
+// --------------------------------- blue -------------------------------- 
+
+
+$('.genie4').mouseenter(function () {
+    $('.genie4 span').text('σ ﾟ∀ ﾟ) ﾟ∀ﾟ)σ')
+})
+
+$('.genie4').mouseleave(function () {
+    $('.genie4 span').text('(ゝ∀･)')
 })

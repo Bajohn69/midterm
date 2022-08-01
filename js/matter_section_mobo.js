@@ -1,4 +1,4 @@
-        // Global Settings / Variables
+        // // Global Settings / Variables
         // var Engine = Matter.Engine,
         //     Render = Matter.Render,
         //     Runner = Matter.Runner,
@@ -16,13 +16,13 @@
         // // world = engine.world;
         // var render;
         // var runner;
-        const canvasWidth_Mobo = 375;
+        const canvasWidt = 375;
         const canvasHeigh_Mobo = 667;
         const blockSize_Mobo = 60;
         const mainBallRadius_Mobo = 60;
         const minimumBlockGenerateX_Mobo = 50;
         const minimumBlockGenerateY_Mobo = 100;
-        const blockSeparateX_Mobo = canvasWidth_Mobo - minimumBlockGenerateX_Mobo - 50;
+        const blockSeparateX_Mobo = canvasWidt- minimumBlockGenerateX_Mobo - 50;
         const blockSeparateY_Mobo = canvasHeigh_Mobo - minimumBlockGenerateY_Mobo  - 100;
         const minimumDistanceBetweenBlocks_Mobo = 300;
 
@@ -36,7 +36,7 @@
                     wireframes:false,
                     showIds:false,
                     background: 'none', 
-                    width:canvasWidth_Mobo,
+                    width:canvasWidt,
                     height:canvasHeigh_Mobo
                 }
             });
@@ -85,8 +85,8 @@
         function formHiddenWall()
         {
             var wallLeft = Bodies.rectangle(-21, canvasHeigh_Mobo/2, 40, canvasHeigh_Mobo, { isStatic: true });
-            var wallFloor = Bodies.rectangle(canvasWidth_Mobo/2, 653, canvasWidth_Mobo, 30, { isStatic: true });
-            var wallRight = Bodies.rectangle(canvasWidth_Mobo+21, canvasHeigh_Mobo/2, 40, canvasHeigh_Mobo, { isStatic: true });
+            var wallFloor = Bodies.rectangle(canvasWidt/2, 653, canvasWidt, 30, { isStatic: true });
+            var wallRight = Bodies.rectangle(canvasWidt+21, canvasHeigh_Mobo/2, 40, canvasHeigh_Mobo, { isStatic: true });
             Composite.add(engine.world, [wallLeft,wallRight,wallFloor]);
         }
 
@@ -183,4 +183,3 @@
 
         // -------------------------------------------------------------------
 
-        
