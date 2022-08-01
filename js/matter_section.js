@@ -166,7 +166,7 @@
         function formHiddenWall()
         {
             var wallLeft = Bodies.rectangle(-21, canvasHeigh/2, 40, canvasHeigh, { isStatic: true });
-            var wallFloor = Bodies.rectangle(canvasWidth/2, canvasHeigh - 200, canvasWidth, 30, { isStatic: true });
+            var wallFloor = Bodies.rectangle(canvasWidth/2, canvasHeigh - 190, canvasWidth, 30, { isStatic: true });
             var wallRight = Bodies.rectangle(canvasWidth+21, canvasHeigh/2, 40, canvasHeigh, { isStatic: true });
             Composite.add(engine.world, [wallLeft,wallRight,wallFloor]);
         }

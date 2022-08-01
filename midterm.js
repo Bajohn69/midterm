@@ -1,15 +1,15 @@
 
-let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
-$('.test1').text(nam)
+// let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
+// $('.test1').text(nam)
 
 
 // console.log($('body').width());
 
 $('#btn').click(function (e) {
-    if($('body').width() > 576){
-        $('h1').css('color','red')
-    }else{
-        $('h1').css('color','blue')
+    if ($('body').width() > 576) {
+        $('h1').css('color', 'red')
+    } else {
+        $('h1').css('color', 'blue')
     }
 })
 
@@ -19,18 +19,18 @@ n = 1
 moving = 0
 $(window).mousewheel(function (e) {
     $('html, body').stop()
-        if(moving == 0){
-            moving = 1
-        if(e.deltaY == -1){
-            if(n < num_li)
+    if (moving == 0) {
+        moving = 1
+        if (e.deltaY == -1) {
+            if (n < num_li)
                 n++
-        }else{
-            if(n > 1){
+        } else {
+            if (n > 1) {
                 n--
             }
         }
     }
-    $('html, body').animate({'scrollTop':$('.p0' + n).offset().top}, function(){moving = 0})
+    $('html, body').animate({ 'scrollTop': $('.p0' + n).offset().top }, function () { moving = 0 })
     console.log(n);
 })
 
@@ -94,85 +94,85 @@ $('.genie1').mouseleave(function () {
 
 // --------------------------------- yellow --------------------------------
 
-    let slider = document.getElementById("myRange");
-    let output = document.getElementById("demo");
-    output.innerHTML = slider.value;
+let slider = document.getElementById("myRange");
+let output = document.getElementById("demo");
+output.innerHTML = slider.value;
 
-    slider.oninput = function () {
+slider.oninput = function () {
     output.innerHTML = this.value;
-    
+
     $('.box').width(this.value * 5)
     $('.box2').width('500' - this.value * 5)
-    $('.bar').css('left',this.value * 5)
-    
+    $('.bar').css('left', this.value * 5)
+
     $('.box3').width(this.value * 2.9)
     $('.box4').width('290' - this.value * 2.9)
-    $('.bar2').css('left',this.value * 2.9)
+    $('.bar2').css('left', this.value * 2.9)
 
+}
+
+// $('.btnDefault').click(function () {
+//     $('.yellow > h2 > test1').text('永')
+// })
+
+$('.btnDefault').click(function () {
+    $('.yellow  span').css('display', 'none');
+
+})
+
+$('.btnName').click(function () {
+    if (nam == '') {
+        nam = prompt('Oops! 剛剛好像沒輸入名字，請告訴我您的大名(づ′▽`)づ')
+        $('.test1').text(nam)
+    } else {
+        $('.yellow  span').css('display', 'flex');
     }
+})
 
-    // $('.btnDefault').click(function () {
-    //     $('.yellow > h2 > test1').text('永')
-    // })
+$('.genie3').mouseenter(function () {
+    $('.genie3 p').text('ㄟ(￣▽￣ㄟ)')
+})
 
-    $('.btnDefault').click(function () {
-        $('.yellow  span').css('display','none');
+$('.genie3').mouseleave(function () {
+    $('.genie3 p').text('(ㄏ￣▽￣)ㄏ')
+})
 
-    })
-    
-    $('.btnName').click(function () {
-        if(nam == ''){
-            nam = prompt('Oops! 剛剛好像沒輸入名字，請告訴我您的大名(づ′▽`)づ')
-            $('.test1').text(nam)
-        }else{
-            $('.yellow  span').css('display','flex');
-        }
-    })
-
-    $('.genie3').mouseenter(function () {
-        $('.genie3 p').text('ㄟ(￣▽￣ㄟ)')
-    })
-
-    $('.genie3').mouseleave(function () {
-        $('.genie3 p').text('(ㄏ￣▽￣)ㄏ')
-    })
-    
 
 // --------------------------------- orange -------------------------------- 
 
 
 $('.orange .w200').mouseenter(function () {
-    $('.w200').fadeIn(100).text('字重就是字體的粗細 / ExtraLight').css('opacity','1')
+    $('.w200').fadeIn(100).text('字重就是字體的粗細 / ExtraLight').css('opacity', '1')
 })
 
 $('.orange .w300').mouseenter(function () {
-    $('.w300').fadeIn(100).text('字重就是字體的粗細 / Light').css('opacity','1')
+    $('.w300').fadeIn(100).text('字重就是字體的粗細 / Light').css('opacity', '1')
 })
 
 $('.orange .w400').mouseenter(function () {
-    $('.w400').fadeIn(100).text('字重就是字體的粗細 / Regular').css('opacity','1')
+    $('.w400').fadeIn(100).text('字重就是字體的粗細 / Regular').css('opacity', '1')
 })
 
 $('.orange .w500').mouseenter(function () {
-    $('.w500').fadeIn(100).text('字重就是字體的粗細 / Medium').css('opacity','1')
+    $('.w500').fadeIn(100).text('字重就是字體的粗細 / Medium').css('opacity', '1')
 })
 
 $('.orange .w600').mouseenter(function () {
-    $('.w600').fadeIn(100).text('字重就是字體的粗細 / SemiBold').css('opacity','1')
+    $('.w600').fadeIn(100).text('字重就是字體的粗細 / SemiBold').css('opacity', '1')
 })
 
 $('.orange .w700').mouseenter(function () {
-    $('.w700').fadeIn(100).text('字重就是字體的粗細 / Bold').css('opacity','1')
+    $('.w700').fadeIn(100).text('字重就是字體的粗細 / Bold').css('opacity', '1')
 })
 
 $('.orange .w900').mouseenter(function () {
-    $('.w900').fadeIn(100).text('字重就是字體的粗細 / Black').css('opacity','1')
+    $('.w900').fadeIn(100).text('字重就是字體的粗細 / Black').css('opacity', '1')
 })
 
 $('.orange .hoverbox').mouseleave(function () {
     // console.log('hi');
     // $('.hoverbox').css('padding','15px')
-    $('.hoverbox h3').text('字重就是字體的粗細').css('opacity','0.8')
+    $('.hoverbox h3').text('字重就是字體的粗細').css('opacity', '0.8')
 })
 
 $('.genie2').mouseenter(function () {
