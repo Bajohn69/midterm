@@ -1,6 +1,6 @@
 
-// let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
-// $('.test1').text(nam)
+let nam = prompt('歡迎來到沾沾字喜的網站，請告訴我您的大名吧(*´▽`*)');
+$('.test1').text(nam)
 
 
 // console.log($('body').width());
@@ -148,13 +148,21 @@ $('.orange .w200').mouseenter(function () {
 $('.orange .w300').mouseenter(function () {
     $('.w300').fadeIn(100).text('字重就是字體的粗細 / Light').css('opacity', '1')
 })
+// mobile
+$('.orange .w400-1').mouseenter(function () {
+    $('.w400-1').fadeIn(100).html('字重就是字體的粗細 / <br> Regular').css('opacity', '1')
+})
 
+$('.orange .w500-1').mouseenter(function () {
+    $('.w500-1').fadeIn(100).html('字重就是字體的粗細 / <br> Medium').css('opacity', '1')
+})
+// mobile
 $('.orange .w400').mouseenter(function () {
     $('.w400').fadeIn(100).text('字重就是字體的粗細 / Regular').css('opacity', '1')
 })
 
 $('.orange .w500').mouseenter(function () {
-    $('.w500').fadeIn(100).text('字重就是字體的粗細 / Medium').css('opacity', '1')
+    $('.w500').fadeIn(100).html('字重就是字體的粗細 / Medium').css('opacity', '1')
 })
 
 $('.orange .w600').mouseenter(function () {
@@ -170,8 +178,6 @@ $('.orange .w900').mouseenter(function () {
 })
 
 $('.orange .hoverbox').mouseleave(function () {
-    // console.log('hi');
-    // $('.hoverbox').css('padding','15px')
     $('.hoverbox h3').text('字重就是字體的粗細').css('opacity', '0.8')
 })
 

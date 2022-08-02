@@ -326,7 +326,6 @@
                     請試著移動游標，<br>
                     看看他們的說明吧！<br>
                     <p>ヽ(=^･ω･^=)丿</p>
-
                 </h6>
             </div>
             <div class="container">
@@ -339,7 +338,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-6 overflow-hidden">
-                        <div class="fontCard fontCard1 border bg-white mx-md-5 font5 my-md-3 my-2">
+                        <div class="fontCard fontCard1 border bg-white mx-md-5  font5 my-md-3 my-2">
                             <div class="front text-center my-md-2 my-n1">
                                 <h2>東</h2>
                             </div>
@@ -373,7 +372,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-6 overflow-hidden">
-                        <div class="fontCard fontCard2 border bg-white mx-md-5 font2  my-md-3 my-2">
+                        <div class="fontCard fontCard3 border bg-white mx-md-5 font2  my-md-3 my-2">
                             <div class="front text-center my-md-4 my-2">
                                 <h2>東</h2>
                             </div>
@@ -1006,15 +1005,25 @@
                 </div>
                 <div class="row justify-content-center text-white font1 flex-column text-center mt-3">
                     <div class="hoverbox ">
-                        <h3 class="w200 ">字重就是字體的粗細</h3>
+                        <h3 class="w200 ">字重就是字體的粗細&nbsp</h3>
                     </div>
                     <div class="hoverbox ">
                         <h3 class="w300 ">字重就是字體的粗細</h3>
                     </div>
-                    <div class="hoverbox ">
+
+                    <!-- mobile -->
+                    <div class="hoverbox d-md-none">
+                        <h3 class="w400-1 ">字重就是字體的粗細</h3>
+                    </div>
+                    <div class="hoverbox d-md-none">
+                        <h3 class="w500-1 ">字重就是字體的粗細</h3>
+                    </div>
+                    <!-- mobile -->
+
+                    <div class="hoverbox d-none d-md-block">
                         <h3 class="w400 ">字重就是字體的粗細</h3>
                     </div>
-                    <div class="hoverbox ">
+                    <div class="hoverbox d-none d-md-block">
                         <h3 class="w500 ">字重就是字體的粗細</h3>
                     </div>
                     <div class="hoverbox ">
@@ -1050,11 +1059,6 @@
 
             <div id="Li71" class="d-md-block font7 ">
                 <div class="matterWrap justify-content-center d-flex mt-3 mt-md-0">
-                    <button class="btn m-1 p-3" onclick="reInit()">
-                        <h6 class="d-none d-md-flex">重新整理</h6><i class="em em-arrows_counterclockwise"
-                            aria-role="presentation"
-                            aria-label="ANTICLOCKWISE DOWNWARDS AND UPWARDS OPEN CIRCLE ARROWS"></i>
-                    </button>
                     <button class="btn m-1 p-3" onclick="AddHappy()">
                         <h6 class="d-none d-md-flex">加點快樂</h6><i class="em em-laughing" aria-role="presentation"
                             aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i>
@@ -1070,6 +1074,11 @@
                     <button class="btn m-1 p-3" onclick="AddCat()">
                         <h6 class="d-none d-md-flex">加點貓貓</h6><i class="em em-cat" aria-role="presentation"
                             aria-label="CAT FACE"></i>
+                    </button>
+                    <button class="btn m-1 p-3" onclick="reInit()">
+                        <h6 class="d-none d-md-flex">重新整理</h6><i class="em em-arrows_counterclockwise"
+                            aria-role="presentation"
+                            aria-label="ANTICLOCKWISE DOWNWARDS AND UPWARDS OPEN CIRCLE ARROWS"></i>
                     </button>
                 </div>
                 <!-- <button class="btn" onclick="Hello()">Hello</button> -->

@@ -490,7 +490,7 @@ h5 {
     font-size: 20px;
 }
 
-.fontCard2 .p3 {
+.fontCard3 .p3 {
     font-size: 18px;
 }
 
@@ -557,7 +557,7 @@ h5 {
         font-size: 14px;
     }
 
-    .fontCard2 .p3 {
+    .fontCard3 .p3 {
         font-size: 10px;
     }
 
@@ -584,6 +584,7 @@ h5 {
     .fontCard6 h6 {
         font-size: 26px;
     }
+
 }
 
 /* --------------------------------- yellow -------------------------------- */
@@ -882,7 +883,7 @@ h5 {
 }
 
 .hoverbox:hover {
-    padding: 30px;
+    padding: 20px;
 }
 
 .hoverbox {
@@ -901,42 +902,48 @@ h5 {
     font-weight: 300;
     /* top: 35%; */
     opacity: .8;
-
 }
 
 .orange .w400 {
     font-weight: 400;
     /* top: 45%; */
     opacity: .8;
-
 }
 
 .orange .w500 {
     font-weight: 500;
     /* top: 55%; */
     opacity: .8;
+}
 
+.orange .w400-1 {
+    font-weight: 400;
+    /* top: 45%; */
+    opacity: .8;
+}
+
+.orange .w500-1 {
+    font-weight: 500;
+    /* top: 55%; */
+    opacity: .8;
 }
 
 .orange .w600 {
     font-weight: 600;
     /* top: 65%; */
     opacity: .8;
-
 }
 
 .orange .w700 {
     font-weight: 700;
     /* top: 75%; */
     opacity: .8;
-
 }
 
 .orange .w900 {
     font-weight: 900;
     /* top: 85%; */
     opacity: .8;
-
 }
 
 /* --------------------------------- blue -------------------------------- */
@@ -944,8 +951,6 @@ h5 {
 .lightblue .em {
     font-size: 1.5rem;
 }
-
-
 
 .lightblue h6 {
     line-height: 1;
