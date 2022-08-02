@@ -945,6 +945,8 @@ h5 {
     font-size: 1.5rem;
 }
 
+
+
 .lightblue h6 {
     line-height: 1;
     font-size: 1.2rem;
@@ -958,6 +960,10 @@ h5 {
     .lightblue .em {
         font-size: 1rem;
         line-height: 0.5;
+    }
+
+    .lightblue .title {
+        width: 300px;
     }
 }
 

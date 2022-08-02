@@ -129,16 +129,18 @@ function BallCat() {
         render: {
             fillStyle: "#FFFFFF",
             sprite: {
-                texture: './img/kissing-cat_1f63d.png'
+                texture: './img/cat-face_1f431.png'
             }
         }
     }, 100);
     Composite.add(engine.world, [mainBall]);
 }
 
+var colorA = '#f55a3c'
+
 function formHiddenWall() {
     var wallLeft = Bodies.rectangle(-21, canvasHeigh / 2, 40, canvasHeigh, { isStatic: true });
-    var wallFloor = Bodies.rectangle(canvasWidth / 2, canvasHeigh * 0.745, canvasWidth, 30, { isStatic: true, background: '#faf' });
+    var wallFloor = Bodies.rectangle(canvasWidth / 2, canvasHeigh * 0.69, canvasWidth, 30, { isStatic: true, fillStyle: colorA });
     var wallRight = Bodies.rectangle(canvasWidth + 21, canvasHeigh / 2, 40, canvasHeigh, { isStatic: true });
     Composite.add(engine.world, [wallLeft, wallRight, wallFloor]);
 }
