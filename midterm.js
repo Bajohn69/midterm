@@ -111,6 +111,8 @@ slider.oninput = function () {
 
 }
 
+slider.oninput()
+
 // $('.btnDefault').click(function () {
 //     $('.yellow > h2 > test1').text('永')
 // })
